@@ -25,7 +25,7 @@ export default class App extends Component {
                     <ChatPanel />
                   </Grid.Column>
                   <Grid.Column width={8}>
-                    <CodePanel />
+                    <CodePanel initialCode='// Code some shit, Breh'/>
                   </Grid.Column>
                 </Grid.Row>
               </Grid>
