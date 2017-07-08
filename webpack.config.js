@@ -1,4 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
 
@@ -29,6 +30,10 @@ module.exports = {
                     loader: 'css-loader'
                 })
             },
+            { 
+              test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
+              use: ['url-loader?limit=100000'] 
+            },
             {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file-loader',
@@ -44,8 +49,11 @@ module.exports = {
             filename: 'bundle.css',
             disable: false,
             allChunks: true
-        }
-    )
-]
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
+    ]
 
 }
