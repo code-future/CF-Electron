@@ -9,6 +9,7 @@ import {
 import Home from './views/Home/index.jsx';
 import AppHeader from './components/Header.jsx';
 import ChatPanel from './views/Home/ChatPanel.jsx';
+import CodePanel from './views/Home/CodePanel.jsx';
 import { Container, Grid } from 'semantic-ui-react'
 
 
@@ -22,6 +23,9 @@ export default class App extends Component {
                 <Grid.Row>
                   <Grid.Column width={4}>
                     <ChatPanel />
+                  </Grid.Column>
+                  <Grid.Column width={8}>
+                    <CodePanel />
                   </Grid.Column>
                 </Grid.Row>
               </Grid>
