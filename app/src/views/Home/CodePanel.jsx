@@ -20,6 +20,15 @@ export default class CodePanel extends Component {
         var options = {
             lineNumbers: true,
         };
-        return <CodeMirror value={this.state.code} onChange={this.updateCode} options={options} />
+        var script;
+        if(this.state.code.indexOf('//yes') > -1) {
+            var s = document.createElement("script");
+            s.type = "text/javascript";
+            s.innerHTML = this.state.code;
+            document.getElementsByTagName("head")[0].appendChild(s);
+        }
+        return (<div>
+                <CodeMirror value={this.state.code} onChange={this.updateCode.bind(this)} options={options} />
+            </div>);
     }
 }
