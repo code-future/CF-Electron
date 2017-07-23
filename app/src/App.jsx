@@ -11,7 +11,7 @@ import AppHeader from './components/Header.jsx';
 import ChatPanel from './views/Home/ChatPanel.jsx';
 import CodePanel from './views/Home/CodePanel.jsx';
 import { Container, Grid } from 'semantic-ui-react'
-
+import test from './tests/tests';
 
 
 export default class App extends Component {
@@ -25,7 +25,7 @@ export default class App extends Component {
                     <ChatPanel />
                   </Grid.Column>
                   <Grid.Column width={8}>
-                    <CodePanel initialCode='// Code some shit, Breh'/>
+                    <CodePanel initialCode={test.boilerplate} testCases={test.spec} name={test.name}/>
                   </Grid.Column>
                 </Grid.Row>
               </Grid>
