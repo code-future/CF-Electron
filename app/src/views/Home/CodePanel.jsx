@@ -4,6 +4,8 @@ import {} from '../../styles/local.css'
 var CodeMirror = require('react-codemirror');
 require('codemirror/lib/codemirror.css');
 
+import tests from '../../tests/test.json';
+
 export default class CodePanel extends Component {
     constructor (props) {
         super(props);

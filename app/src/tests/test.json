@@ -1,0 +1,73 @@
+[
+  {
+    "id": 0,
+    "instructions": "Create an object with two keys. Set the values to 0",
+    "boilerplate": "function twoKeys(a, b){ }",
+    "spec": [
+      {
+        "input": ["apples", "oranges"],
+        "expected": {"apples": 0, "oranges": 0}
+      },
+      {
+        "input": ["boys", "girls"],
+        "expected": {"boys": 0, "girls": 0}
+      }
+    ],
+    "functionName": "twoKeys",
+    "topics": ["objects", "assignment"],
+    "difficulty": 1,
+    "commonMistakes": [],
+    "edges": [
+      {
+        "success": 1,
+        "fail": 2
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "instructions": "Now let's practice using the delete keyword. Create a function that takes an object and the name of a key, and deletes that key. Return the same object.",
+    "boilerplate": "function deleteMyKey(obj, key){ }",
+    "spec": [
+      {
+        "input": [{ "a": 1, "b": 2, "c": 16}, "c"],
+        "expected": {"a": 1, "b": 2}
+      },
+      {
+        "input": [{ "apple": 1, "banana": 2, "candy": 16}, "banana"],
+        "expected": {"apple": 1, "candy": 16}
+      }
+    ],
+    "functionName": "deleteMyKey",
+    "topics": ["objects", "deletion"],
+    "difficulty": 2,
+    "commonMistakes": [],
+    "edges": [
+      {
+        "success": null,
+        "fail": null
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "instructions": "Let's try assigning values to a different object. Create a function that ",
+    "boilerplate": "function oneKey(obj, key, value){ }",
+    "spec": [
+      {
+        "input": [{}, "c", 1],
+        "expected": {"c": 1}
+      }
+    ],
+    "functionName": "oneKey",
+    "topics": ["objects", "assignment"],
+    "difficulty": 1,
+    "commonMistakes": [],
+    "edges": [
+      {
+        "success": 2,
+        "fail": null
+      }
+    ]
+  }
+]

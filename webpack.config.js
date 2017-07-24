@@ -40,6 +40,10 @@ module.exports = {
                 query: {
                     name: '[name].[ext]?[hash]'
                 }
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
             }
         ]
     },
