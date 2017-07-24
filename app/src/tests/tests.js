@@ -1,4 +1,5 @@
 var fnName = 'test';
+var tests = require('test.json');
 
 function init() {
     var fn = window.userCode[fnName];
